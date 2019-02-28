@@ -1,0 +1,58 @@
+{
+  "name": "thoconcattuong",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.8.1",
+    "firebase": "^5.7.0",
+    "firebase-admin": "^6.4.0",
+    "firebase-functions": "^2.1.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.6.3",
+    "react-autocomplete": "^1.8.1",
+    "react-dom": "^16.6.3",
+    "react-pokemon-gif": "^1.0.2",
+    "react-redux": "^5.1.1",
+    "react-redux-firebase": "^2.2.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.2",
+    "redux": "^4.0.1",
+    "redux-firestore": "^0.6.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "eslint": "5.6.0",
+    "execa": "1.0.0",
+    "fs-extra": "^7.0.0",
+    "get-port": "^4.0.0",
+    "globby": "^8.0.1",
+    "husky": "1.0.0-rc.15",
+    "jest": "^23.6.0",
+    "lerna": "2.9.1",
+    "lerna-changelog": "^0.7.0",
+    "lint-staged": "^8.0.4",
+    "meow": "^5.0.0",
+    "multimatch": "^2.1.0",
+    "prettier": "1.15.2",
+    "puppeteer": "^1.8.0",
+    "strip-ansi": "^4.0.0",
+    "svg-term-cli": "^2.1.1",
+    "tempy": "^0.2.1",
+    "wait-for-localhost": "2.0.1"
+  }
+}
