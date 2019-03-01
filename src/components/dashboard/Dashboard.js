@@ -47,8 +47,8 @@ class Dashboard extends Component {
                                 autoComplete="off" 
                                 onChange={ e => this.handleSearchChange(e) }
                                 placeholder="Item Code" />
-                                </div> 
-                            </div>
+                            </div> 
+                        </div>
                     </div>
 
                     {/* List of products */}
