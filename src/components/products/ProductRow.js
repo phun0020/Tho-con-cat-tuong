@@ -9,12 +9,12 @@ class ProductRow extends Component {
         this.props.removeProduct(product);
     }
 
-    timeStampToShortDate = (date) => {
-        return date.constructor.name === 'Timestamp' ? date.toDate().toLocaleDateString() : date;
-    }
+    // bug when deploy only
+    // timeStampToShortDate = (date) => {
+    //     return date.constructor.name === 'Timestamp' ? date.toDate().toLocaleDateString() : date;
+    // }
 
     render() {
-        
         const { product } = this.props;
         const total = (product.quantity && product.unitPrice) ? product.quantity * product.unitPrice : "N/A";
         const totalAmount = total - product.discount;
@@ -22,7 +22,7 @@ class ProductRow extends Component {
         return (
         <tr>
                 <td>{ product.po }</td>
-                <td>{ this.timeStampToShortDate(product.date) }</td>
+                <td></td>
                 <td>{ product.itemCode }</td>
                 <td>{ product.type }</td>
                 <td>{ product.description }</td>
@@ -35,7 +35,7 @@ class ProductRow extends Component {
                 <td>{ product.transportationFee }</td>
                 <td>{ product.impost }</td>
                 <td>{ product.vat }</td>
-                <td>{ this.timeStampToShortDate(product.receivedDate) }</td>
+                <td></td>
                 <td>{ product.toKhai }</td>
                 <td>{ product.status }</td>
                 <td>
