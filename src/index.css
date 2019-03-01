@@ -42,6 +42,30 @@ code {
   background: linear-gradient(45deg, #0288d1, #26c6da) !important;
 }
 
+.gradient-45deg-purple-deep-orange {
+  background: #8e24aa;
+  background: -webkit-linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+  background: -moz- oldlinear-gradient(45deg, #8e24aa, #ff6e40) !important;
+  background: -o-linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+  background: linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+}
+
+.gradient-45deg-green-teal {
+  background: #43a047;
+  background: -webkit-linear-gradient(45deg, #43a047, #1de9b6) !important;
+  background: -moz- oldlinear-gradient(45deg, #43a047, #1de9b6) !important;
+  background: -o-linear-gradient(45deg, #43a047, #1de9b6) !important;
+  background: linear-gradient(45deg, #43a047, #1de9b6) !important;
+}
+
+.gradient-45deg-amber-amber {
+  background: #ff6f00;
+  background: -webkit-linear-gradient(45deg, #ff6f00, #ffca28) !important;
+  background: -moz- oldlinear-gradient(45deg, #ff6f00, #ffca28) !important;
+  background: -o-linear-gradient(45deg, #ff6f00, #ffca28) !important;
+  background: linear-gradient(45deg, #ff6f00, #ffca28) !important;
+}
+
 .full-width {
   width: 100%;
 }

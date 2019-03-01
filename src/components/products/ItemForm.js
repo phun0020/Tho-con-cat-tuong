@@ -21,10 +21,10 @@ class ItemForm extends Component {
         })
     }
 
-    componentDidUpdate() {
-        let elems = document.querySelectorAll('.fixed-action-btn');
-        M.FloatingActionButton.init(elems, {
-            direction: 'left',
+    componentDidMount() {
+        M.updateTextFields();
+        M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), { 
+            direction: 'left' 
         });
     }
 

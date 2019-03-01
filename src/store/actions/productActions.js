@@ -1,21 +1,32 @@
 export const createProduct = (product) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
-        if(product.items) dispatch({ type: 'CREATE_PRODUCT_ERROR', error: 'Items are empty' })
-        const fireStore = getFirestore();
+        if(!product.items) {
+            dispatch({ type: 'CREATE_PRODUCT_ERROR', error: 'Items are empty' });
+            return null;
+        }
 
+        const fireStore = getFirestore();
         // for each item, add a record to products collection
         product.items.map(item => {
-            const { items, ...newProduct } = product; 
+            // https://codeburst.io/use-es2015-object-rest-operator-to-omit-properties-38a3ecffe90
+            // keep forgeting how to remove item in object using spread operator
+            // More detail: CreateProduct.js
 
-            fireStore.collection('products').add({
+            const { items, ...newProduct } = product;
+            const { id, ...newItem } = item;
+            const newDoc = {
                 ...newProduct,
-                ...item,
+                ...newItem,
                 createdBy: 'Tam Phung',
                 createdDate: new Date(),
-            }).then(() => {
+            }
+
+            fireStore.collection('products')
+            .add(newDoc)
+            .then(() => {
                 dispatch({
                     type: 'CREATE_PRODUCT',
-                    product
+                    newDoc
                 });
             }).catch(error => {
                 dispatch({

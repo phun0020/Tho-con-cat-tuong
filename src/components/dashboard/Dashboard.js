@@ -16,7 +16,7 @@ class Dashboard extends Component {
             let newList;
 
             newList = this.props.products.filter(product => {
-                const lcProduct = product['Item Code'].toLowerCase();
+                const lcProduct = product.itemCode.toLowerCase();
                 const lcQuery = query.toLowerCase();
 
                 return lcProduct.includes(lcQuery);
@@ -34,7 +34,7 @@ class Dashboard extends Component {
 
         if(products) {
             let itemCodeArr = [];
-            products.map(product => itemCodeArr.push({ label: product['Item Code'] }));
+            products.map(product => itemCodeArr.push({ label: product.itemCode }));
             
             return (
                 <div className="dashboard">

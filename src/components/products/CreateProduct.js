@@ -7,38 +7,41 @@ import M from 'materialize-css';
 import { Redirect } from 'react-router-dom';
 
 class CreateProduct extends Component {
-  // initState = {
-  //   itemCode: 'GH-111',
-  //   description: 'description for gh-111',
-  //   type: 'chrome',
-  //   quantity: 25,
-  //   unitPrice: 10,
-  //   discount: 10,
-  //   supplier: 'microhard',
-  //   term: 'return in 60 days',
-  // }
-
   initState = {
-    itemCode: '',
-    description: '',
-    type: '',
-    quantity: 0,
-    unitPrice: 0,
-    discount: 0,
-    supplier: '',
-    term: ''
+    itemCode: 'GH-111',
+    description: 'description for gh-111',
+    type: 'chrome',
+    quantity: 25,
+    unitPrice: 10,
+    discount: 10,
+    supplier: 'microhard',
+    term: 'return in 60 days',
   }
+
+  // initState = {
+  //   itemCode: '',
+  //   description: '',
+  //   type: '',
+  //   quantity: 0,
+  //   unitPrice: 0,
+  //   discount: 0,
+  //   supplier: '',
+  //   term: ''
+  // }
   
+  // this only add a temporary id to this product
+  // I don't have any unique prop to distinguish each item
+  // will remove & replace with firestore id
   generateNewItem = () => Object.assign({ id: guid() }, this.initState)
 
   state = {
-    po: '',
+    po: 'PO123',
     date: new Date(),
-    transportationFee: 0,
-    impost: 0,
-    vat: 0,
+    transportationFee: 100,
+    impost: 500,
+    vat: 50,
     receivedDate: new Date(),
-    toKhai: '',
+    toKhai: 'TK123',
     status: '0',
     items: [this.generateNewItem()],
   };
@@ -88,13 +91,12 @@ class CreateProduct extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    let isValid = Object.value(this.state).every(prop => prop !== null);
+    let isValid = Object.values(this.state).every(prop => prop !== null);
     isValid && this.props.createProduct(this.state);
   }
 
   componentDidMount() {
     let elems = document.querySelectorAll('.datepicker');
-    M.updateTextFields();
     M.Datepicker.init(elems, {
       defaultDate: new Date(),
       setDefaultDate: false

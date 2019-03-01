@@ -24,7 +24,7 @@ const ProductList = ({products}) => {
                         <th>Thuế NK</th>
                         <th>Thuế VAT</th>
                         <th>Received Date</th>
-                        <th>Tờ khai</th>
+                        <th>Tờ khai #</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>

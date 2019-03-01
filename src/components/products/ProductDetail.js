@@ -13,8 +13,8 @@ const ProductDetail = (props) => {
             <div className="container section product-details">
                 <div className="card z-depth-0">
                     <div className="card-content">
-                        <span className="card-title">ITEM: { product['Item Code'] }</span>
-                        <p>Description: { product.Description }</p>
+                        <span className="card-title">ITEM: { product.itemCode }</span>
+                        <p>Description: { product.description }</p>
                     </div>
                 </div>
                 
